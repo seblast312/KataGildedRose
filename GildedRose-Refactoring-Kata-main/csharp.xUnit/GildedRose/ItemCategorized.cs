@@ -76,6 +76,7 @@ public class ItemCategorized : Item
                 {
                     this.Quality = 0;
                 }
+                this.Quality = this.Quality > 50 ? 50 : this.Quality; 
                 break;
             case ItemCategory.Conjured:
                 this.Quality = this.Quality - 2 >= 0 ? this.Quality - 2 : 0;
@@ -83,6 +84,10 @@ public class ItemCategorized : Item
             default:
                 break;
         }
-        this.SellIn = this.SellIn - 1;
+
+        if (this.Category != ItemCategory.Legendary) // respect de l'ancienne regle du code
+        {
+            this.SellIn = this.SellIn - 1;   
+        }
     }
 }

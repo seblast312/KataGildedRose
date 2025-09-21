@@ -50,9 +50,9 @@ public class Program
         {
             Console.WriteLine("-------- day " + i + " --------");
             Console.WriteLine("name, sellIn, quality");
-            for (var j = 0; j < items.Count; j++)
+            for (var j = 0; j < app.ItemCategorizeds.Count; j++)
             {
-                Console.WriteLine(items[j].Name + ", " + items[j].SellIn + ", " + items[j].Quality);
+                Console.WriteLine(app.ItemCategorizeds[j].Name + ", " + app.ItemCategorizeds[j].SellIn + ", " + app.ItemCategorizeds[j].Quality);
             }
             Console.WriteLine("");
             app.UpdateQualityCategorized();
